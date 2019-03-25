@@ -1,14 +1,36 @@
 @import 'palette';
 // VARIABLES
 $bigfont: 2em;
+$for_desktop: 'only screen and (min-width: 768px)';
+$sidebar-width: 200px;
 
 body {
   color: $color3;
   background-color: $color1;
 }
 
+a {
+  text-decoration: underline $color4;
+  color: $color4;
+
+  &:hover {
+    text-decoration: none;
+    background-color: $color4;
+    color: $color1;
+  }
+}
+
 // NAVBAR
 #navbar {
+  @media #{$for_desktop} {
+    position: fixed;
+    min-width: $sidebar-width - 10px;
+    top: 0px;
+    left: 0px;
+    width: $sidebar-width;
+    height: 100%;
+  }
+
   header {
     font-size: $bigfont;
     text-align: center;
@@ -17,7 +39,6 @@ body {
 
   .nav-link {
     text-decoration: none;
-    font-size: $bigfont;
     color: $color4;
 
     &:hover {
@@ -26,9 +47,74 @@ body {
   }
 
   ul {
+    max-height: 100px;
     padding-inline-start: 0;
+    overflow: scroll;
+
+    @media #{$for_desktop} {
+      max-height: none;
+    }
+
     li {
       display: block;
+      padding: 0.4em 0em 0.4em 2em;
+      border-top: 1px solid $color2;
+
+      &:last-child {
+        border-bottom: 1px solid $color2;
+      }
     }
+  }
+}
+
+.main-section {
+  margin-top: 2.5em;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  header {
+    font-size: $bigfont;
+    padding: 0.2em 0.5em;
+    background-color: $color4;
+    color: $color1;
+  }
+
+  p,
+  code {
+    margin: 1em;
+  }
+
+  ul {
+    padding-block-start: 1em;
+    padding-block-end: 1em;
+    padding-inline-start: 2em;
+    li {
+      list-style: upper-latin;
+      padding: 0.25em 0;
+    }
+  }
+
+  code {
+    display: block;
+    border-radius: 5px;
+    padding-left: 1em;
+    white-space: pre;
+
+    font-size: 0.75em;
+    background-color: $color2;
+    color: $color1;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+  }
+}
+
+@media #{$for_desktop} {
+  #main-doc {
+    position: absolute;
+    margin-left: $sidebar-width + 10px;
+    padding: 20px;
   }
 }

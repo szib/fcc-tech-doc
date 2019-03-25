@@ -1,9 +1,30 @@
 /* Coolors Exported Palette - coolors.co/daf2e0-1f271b-0b4f6c-145c9e-cbb9a8 */
-/* HSL */
-/* RGB */
 body {
   color: #0b4f6c;
   background-color: #daf2e0;
+}
+
+a {
+  -webkit-text-decoration: underline #145c9e;
+          text-decoration: underline #145c9e;
+  color: #145c9e;
+}
+
+a:hover {
+  text-decoration: none;
+  background-color: #145c9e;
+  color: #daf2e0;
+}
+
+@media only screen and (min-width: 768px) {
+  #navbar {
+    position: fixed;
+    min-width: 190px;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 100%;
+  }
 }
 
 #navbar header {
@@ -14,7 +35,6 @@ body {
 
 #navbar .nav-link {
   text-decoration: none;
-  font-size: 2em;
   color: #145c9e;
 }
 
@@ -23,11 +43,79 @@ body {
 }
 
 #navbar ul {
+  max-height: 100px;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
+  overflow: scroll;
+}
+
+@media only screen and (min-width: 768px) {
+  #navbar ul {
+    max-height: none;
+  }
 }
 
 #navbar ul li {
   display: block;
+  padding: 0.4em 0em 0.4em 2em;
+  border-top: 1px solid #1f271b;
+}
+
+#navbar ul li:last-child {
+  border-bottom: 1px solid #1f271b;
+}
+
+.main-section {
+  margin-top: 2.5em;
+}
+
+.main-section:first-child {
+  margin-top: 0;
+}
+
+.main-section header {
+  font-size: 2em;
+  padding: 0.2em 0.5em;
+  background-color: #145c9e;
+  color: #daf2e0;
+}
+
+.main-section p,
+.main-section code {
+  margin: 1em;
+}
+
+.main-section ul {
+  -webkit-padding-before: 1em;
+          padding-block-start: 1em;
+  -webkit-padding-after: 1em;
+          padding-block-end: 1em;
+  -webkit-padding-start: 2em;
+          padding-inline-start: 2em;
+}
+
+.main-section ul li {
+  list-style: upper-latin;
+  padding: 0.25em 0;
+}
+
+.main-section code {
+  display: block;
+  border-radius: 5px;
+  padding-left: 1em;
+  white-space: pre;
+  font-size: 0.75em;
+  background-color: #1f271b;
+  color: #daf2e0;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+  #main-doc {
+    position: absolute;
+    margin-left: 210px;
+    padding: 20px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
