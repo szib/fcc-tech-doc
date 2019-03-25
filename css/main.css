@@ -1,0 +1,33 @@
+/* Coolors Exported Palette - coolors.co/daf2e0-1f271b-0b4f6c-145c9e-cbb9a8 */
+/* HSL */
+/* RGB */
+body {
+  color: #0b4f6c;
+  background-color: #daf2e0;
+}
+
+#navbar header {
+  font-size: 2em;
+  text-align: center;
+  padding: 10px 0;
+}
+
+#navbar .nav-link {
+  text-decoration: none;
+  font-size: 2em;
+  color: #145c9e;
+}
+
+#navbar .nav-link:hover {
+  color: #1f271b;
+}
+
+#navbar ul {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+
+#navbar ul li {
+  display: block;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,34 @@
+@import 'palette';
+// VARIABLES
+$bigfont: 2em;
+
+body {
+  color: $color3;
+  background-color: $color1;
+}
+
+// NAVBAR
+#navbar {
+  header {
+    font-size: $bigfont;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    font-size: $bigfont;
+    color: $color4;
+
+    &:hover {
+      color: $color2;
+    }
+  }
+
+  ul {
+    padding-inline-start: 0;
+    li {
+      display: block;
+    }
+  }
+}
